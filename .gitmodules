@@ -1,0 +1,12 @@
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/syl20bnr/spacemacs
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".oh-my-zsh/custom/themes/powerlevel10k"]
+	path = .oh-my-zsh/custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".oh-my-zsh/custom/plugins/careful_rm"]
+	path = .oh-my-zsh/custom/plugins/careful_rm
+	url = https://github.com/MikeDacre/careful_rm.git

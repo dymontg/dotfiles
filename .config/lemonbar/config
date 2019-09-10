@@ -1,0 +1,48 @@
+###############################################################################
+#                       Sets color scheme for dotfile scripts                 #
+###############################################################################
+
+# Temporary IO file.
+workspaces_fifo="/tmp/${USER}_lemonbar_workspaces"
+
+# Spacers (pixels)
+spacer_size=30 # Spacer for statusbar
+workspace_spacer_size=15 # Spacer for workspaces
+
+date_format='+%H:%M:%S %a %e %b'
+
+#-*- Fonts -*-
+bar_font="TerminessTTF Nerd Font Mono" # Default font used for all text
+glyph_font="${bar_font}" # Font used for glyphs
+workspaces_font="${glyph_font}:size=14" # Font used for workspace indicators
+
+#-*- Color Palette -*-
+foreground="#5d4d7a" # Default text color
+background="#292b2e" # Bar background color
+urgent_color="#ff0000" # Red
+
+workspace_focused_color="#f3f4f5" # White
+workspace_active_color="${workspace_focused_color}"
+workspace_inactive_color="${foreground}"
+
+statusbar_glyph_color="#f3f4f5" # Color of the text/glyph
+statusbar_value_color="${foreground}" # Color of the bar information
+
+#-*- Text and/or glyphs for the statusbar -*-
+wired_connection_glyph="\uf6ff"
+wireless_connection_glyph="\uf1eb"
+clock_glyph="\uf017"
+cpu_glyph="CPU"
+
+# Text for the default sink (audio output).
+sink_muted_glyph="\uf6a9"
+sink_volume_high_glyph="\uf028"
+sink_volume_low_glyph="\uf027"
+sink_volume_off_glyph="\uf026"
+
+battery_full_glyph="\uf240"
+battery_three_quarters_full_glyph="\uf241"
+battery_half_full_glyph="\uf242"
+battery_quarter_full_glyph="\uf243"
+battery_empty_glyph="\uf244"
+charging_glyph="\uf5e7"
