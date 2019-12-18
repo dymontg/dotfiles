@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+z exec emacs ~/.config/i3/config
 
 # Lock the screen - REQUIRED:: i3-lock
-#bindsym $mod+Shift+x exec i3lock -i ~/.config/i3/lock
+bindsym $mod+Shift+x exec i3lock -i ~/.config/i3/lock
 
 # ALSA key bindings - REQUIRED:: alsa-utils
 #bindsym XF86AudioRaiseVolume exec amixer -q set Master 10%+ unmute
@@ -207,7 +207,7 @@ bindsym $mod+i exec qutebrowser
 # Open empty container (for screenshots)
 bindsym $mod+Shift+i open
 
-
+bindsym $mod+Shift+p move workspace to output right
 #-*- Window settings -*-
 
 
@@ -235,6 +235,7 @@ for_window [class="chromium"] move to workspace $ws1
 
 for_window [class="unicode-rxvt"] move to workspace $ws2
 
+for_window [class="Slack"] move to workspace $ws8
 for_window [class="Spotify"] move to workspace $ws9, workspace --no-auto-back-and-forth $ws9
 for_window [class="keepassxc"] move to workspace $ws10
 
@@ -243,6 +244,7 @@ exec --no-startup-id feh --bg-fill ~/.config/i3/wp
 
 exec --no-startup-id qutebrowser
 exec --no-startup-id spotify
+exec --no-startup-id slack
 exec --no-startup-id keepassxc
 
 #-*- Misc settings -*-

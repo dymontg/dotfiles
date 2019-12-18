@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/lib/ccache/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -102,12 +102,14 @@ export EDITOR='emacs'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="emacs ~/.zshrc"
+#alias ohmyzsh="mate ~/.oh-my-zsh"
 
 if [[ -f /usr/share/autojump/autojump.zsh ]]; then
   source /usr/share/autojump/autojump.zsh
 fi
+
+export CCACHE_DIR="/var/cache/ccache"
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
