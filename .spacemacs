@@ -39,28 +39,29 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     ;; better-defaults
      git
      helm
      markdown
      multiple-cursors
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
+     (shell :variables
+             shell-default-height 30
+             shell-default-position 'bottom)
      syntax-checking
-     ;; version-control
-
-     ;; User defined layers
      treemacs
      semantic
-     gtags
+     lsp
      ;; User defined languages
      emacs-lisp
      python
      ipython-notebook
-     c-c++
+     (c-c++ :variables
+              c-c++-adopt-subprojects t
+              c-c++-backend 'lsp-ccls
+              c-c++-lsp-enable-semantic-highlight 'overlay
+              c-c++-default-mode-for-headers 'c++-mode
+              c++-enable-organize-includes-on-save t
+              c-c++-enable-clang-format-on-save t)
      protobuf
      html
      javascript
