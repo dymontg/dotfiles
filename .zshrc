@@ -105,11 +105,11 @@ export EDITOR='emacs'
 alias zshconfig="emacs ~/.zshrc"
 #alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export CCACHE_DIR="/home/tux/.ccache"
+
 if [[ -f /usr/share/autojump/autojump.zsh ]]; then
   source /usr/share/autojump/autojump.zsh
 fi
-
-export CCACHE_DIR="/var/cache/ccache"
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
