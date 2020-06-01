@@ -63,8 +63,9 @@ This function should only modify configuration layer settings."
             c-c++-adopt-subprojects t
             c-c++-backend 'lsp-ccls
             c-c++-lsp-enable-semantic-highlight 'overlay
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-format-on-save t)
+            c-c++-default-mode-for-headers 'c++-mode)
+            ;;c-c++-enable-clang-format-on-save t)
+     asm
      protobuf
      html
      javascript

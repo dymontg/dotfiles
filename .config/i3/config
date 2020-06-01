@@ -196,7 +196,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Screenshot - REQUIRED:: scrot
-bindsym Print exec scrot
+bindsym $mod+Shift+Print exec scrot
 
 # PavuControl - REQUIRED:: pavucontrol
 bindsym $mod+p exec pavucontrol

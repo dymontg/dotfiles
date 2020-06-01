@@ -12,7 +12,6 @@ xkbset accessx sticky -twokey -latchlock
 xkbset exp 1 =accessx =sticky =twokey =latchlock
 
 # Startup daemons
-pulseaudio &
 urxvtd -q -f -o &
 
 # Start i3

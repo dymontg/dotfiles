@@ -4,5 +4,5 @@ files=".Xresources .xinitrc .zshrc .spacemacs .oh-my-zsh .fonts .config/i3 .conf
 
 for file in $files; do
     printf "Creating symlink to %s in home directory.\n" "${file}"
-    ln -s "${SCRIPTDIR}/${file}" "${HOME}/${file}"
+    ln -sfn "${SCRIPTDIR}/${file}" "${HOME}/${file}"
 done
