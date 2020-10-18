@@ -74,6 +74,7 @@ plugins=(
   gitfast
   colored-man-pages
   careful_rm
+  zsh-safe-rm
 )
 
 source $ZSH/oh-my-zsh.sh
