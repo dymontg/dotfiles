@@ -1,7 +1,3 @@
-[submodule ".emacs.d"]
-	path = .emacs.d
-    branch = develop
-	url = https://github.com/syl20bnr/spacemacs
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
@@ -11,3 +7,6 @@
 [submodule ".oh-my-zsh/custom/plugins/careful_rm"]
 	path = .oh-my-zsh/custom/plugins/careful_rm
 	url = https://github.com/MikeDacre/careful_rm.git
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/hlissner/doom-emacs.git
