@@ -13,6 +13,7 @@ xkbset exp 1 =accessx =sticky =twokey =latchlock
 
 # Startup daemons
 urxvtd -q -f -o &
+dunst &
 
 # Start i3
 exec i3
