@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/lib/ccache/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$PATH
+export PATH=/usr/lib/ccache/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -75,6 +75,9 @@ plugins=(
   colored-man-pages
   careful_rm
   zsh-safe-rm
+  zsh-autosuggestions
+  fzf
+  catimg
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,3 +118,8 @@ fi
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator time)
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi

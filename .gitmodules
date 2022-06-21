@@ -7,6 +7,3 @@
 [submodule ".oh-my-zsh/custom/plugins/careful_rm"]
 	path = .oh-my-zsh/custom/plugins/careful_rm
 	url = https://github.com/MikeDacre/careful_rm.git
-[submodule ".emacs.d"]
-	path = .emacs.d
-	url = https://github.com/hlissner/doom-emacs.git

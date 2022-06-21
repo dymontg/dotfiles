@@ -4,10 +4,10 @@
 # Depends on: imagemagick, i3lock, scrot
 
 IMAGE=/tmp/lockscreen.png
-ICON=~/dotfiles/.config/i3/lock
+ICON=~/dotfiles/.config/sway/lock
 
-scrot $IMAGE
+grim $IMAGE
 convert $IMAGE -scale 10% -scale 1000% -fill black -colorize 25% $IMAGE
 convert $IMAGE $TEXT -gravity center -geometry +0+200 -composite $IMAGE
 convert $IMAGE $ICON -gravity center -composite -matte $IMAGE
-i3lock -u -i $IMAGE
+swaylock -u -i $IMAGE
