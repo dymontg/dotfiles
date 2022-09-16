@@ -1,0 +1,9 @@
+* {
+    background:     #282c34ff;
+    background-alt: #21242bff;
+    foreground:     #bbc2cfff;
+    selected:       #51afefff;
+    active:         #99be65ff;
+    urgent:         #ff6c6bff;
+    font-family: "FiraCode";
+}

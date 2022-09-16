@@ -14,11 +14,12 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term urxvtc
+set $term kitty
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show drun | xargs swaymsg exec --
+set $menu ~/.config/rofi/launcher/launcher.sh | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -44,10 +45,9 @@ output eDP-1 resolution 1920x1080 position 0,0
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
-# exec swayidle -w \
-#         timeout 600 '~/.scripts/lock.zsh' \
-#         timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#         before-sleep '~/.scripts/lock.zsh'
+exec swayidle \
+        timeout 300 '~/.scripts/lock.zsh' \
+        timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 
 # ### Input configuration
 #
@@ -250,9 +250,10 @@ bindsym $mod+Shift+x exec ~/.scripts/lock.zsh
 #bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # PulseAudio key bindings - REQUIRED:: pulseaudio (pactl)
-set $volume_notification exec $notify -i
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+set $volume_notification exec $notify -i test "volume" "$(sleep 0.1; pactl list sinks | grep '^[[:space:]]Volume:' | \
+    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')%"
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%, $volume_notification
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%, $volume_notification
 bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
 
@@ -264,10 +265,12 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Brightness key bindings - REQUIRED:: light
 # Sleeping a bit otherwise the value is not correct
-set $luminosity_notification exec $notify -i display-brightness-symbolic "luminosity" "$(sleep 0.1; light -G)%"
+#set $luminosity_notification exec $notify -i display-brightness-symbolic "luminosity" "$(sleep 0.1; light -G)%"
 
-bindsym --locked XF86MonBrightnessUp exec light -T 1.4, $luminosity_notification
-bindsym --locked XF86MonBrightnessDown exec light -T 0.72, $luminosity_notification
+#bindsym --locked XF86MonBrightnessUp exec light -T 1.4, $luminosity_notification
+#bindsym --locked XF86MonBrightnessDown exec light -T 0.72, $luminosity_notification
+bindsym --locked XF86MonBrightnessUp exec light -T 1.4
+bindsym --locked XF86MonBrightnessDown exec light -T 0.72
 
 bindsym XF86Search exec $menu
 
@@ -320,12 +323,11 @@ assign [class="chromium"] $ws1
 #for_window [class="unicode-rxvt"] move to workspace $ws2
 
 assign [class="Slack"] $ws8
-assign [class="Spotify"] $ws9
-assign [class="KeePassXC"] $ws10
+#for_window [class="Spotify"] move container to workspace $ws9
+#for_window [class="KeypassXC"] move container to workspace $ws10
 
 exec --no-startup-id qutebrowser
 exec --no-startup-id spotify
-exec --no-startup-id slack
 exec --no-startup-id keepassxc
 
 set $laptop eDP-1

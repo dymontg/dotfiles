@@ -1,0 +1,161 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "FiraCode";
+	font-size: 14px;
+	font-weight: bold;
+}
+
+window#waybar {
+	background: none;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+	background: #21242b;
+	color: #bbc2cf;
+}
+
+#custom-powermenu {
+	margin-top: 6px;
+	margin-left: 12px;
+	margin-right: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 5px;
+	transition: none;
+	color: #bbc2cf;
+	background: #21242b;
+}
+
+#custom-powermenu button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #51afef;
+}
+
+
+#workspaces {
+	margin-top: 6px;
+	margin-right: 12px;
+	margin-left: 12px;
+	font-size: 4px;
+	border-radius: 5px;
+	transition: none;
+	background: #21242b;
+}
+
+#workspaces button {
+	transition: none;
+	color: #bbc2cf;
+	background: transparent;
+	border-radius: 0px;
+}
+
+#workspaces button.current_output {
+	transition: none;
+	color: #99be65;
+	background: transparent;
+	font-size: 4px;
+}
+
+
+#workspaces button.focused {
+	color: #51afef;
+	border-bottom: 2px solid #81a1c1;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #51afef;
+}
+
+#temperature {
+	margin-top: 6px;
+	margin-right: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 0 10px;
+	color: #99be65;
+	background: #21242b;
+}
+
+#pulseaudio {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 0 10px;
+	color: #99be65;
+	background: #21242b;
+}
+
+#battery {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #99be65;
+	background: #21242b;
+}
+
+#battery.critical:not(.charging) {
+	background-color: #bbc2cf;
+	color: #21242b;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes blink {
+	to {
+		background-color: #ff6c6b;
+		color: #bbc2cf;
+	}
+}
+
+#backlight {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #51afef;
+	background: #21242b;
+}
+
+#custom-clock {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #51afef;
+	background: #21242b;
+}
+
+
+#custom-date {
+	margin-top: 6px;
+	margin-left: 12px;
+	margin-right: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #99be65;
+	background: #21242b;
+}

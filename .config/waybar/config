@@ -1,0 +1,86 @@
+{
+	"layer": "top",
+	"modules-left": ["sway/workspaces", "temperature"],
+	"modules-center": ["sway/window"],
+	"modules-right": ["battery", "backlight", "pulseaudio", "custom/clock", "custom/date"],
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-muted": "婢  0%",
+		"on-click":"amixer -D pulse Master 1+ toggle",
+		"scroll-step": 5,
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+/*	"custom/powermenu": {
+		"format": "",
+		"interval": "once",*/
+		/*"exec": "checkupdates | wc -l",*/
+		/*"on-click": "~/.config/waybar/modules/powermenu.sh",
+		"tooltip": false,
+		"signal": 8
+	},*/
+
+	"sway/workspaces": {
+        "format": "{icon}",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "9": [],
+            "10": []
+        },
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"9": "",
+			"10": ""
+		},
+		"disable-click": false,
+		"num-tags": 7
+	},
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+		"format": "{temperatureC}°C "
+	},
+	"sway/window": {
+		"format": "{}",
+		"max-length": 90
+	},
+	"backlight": {
+		"device": "amdgpu_b10",
+		"format": "{icon}  {}%",
+		"format-icons": ["", ""],
+		"interval": 1
+	},
+	"battery": {
+		"states": {
+			"good": 100,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{icon}  {capacity}%",
+		"format-charging": "{icon}   {capacity}%",
+		"format-plugged": "{icon}   {capacity}%",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"custom/clock": {
+		"interval": 1,
+		"return-type": "string",
+		"exec": "~/.config/waybar/modules/clock.sh",
+		"tooltip": false
+	},
+	"custom/date": {
+		"interval": 1,
+		"return-type": "string",
+		"exec": "~/.config/waybar/modules/date.sh",
+		"tooltip": false
+	},
+
+}

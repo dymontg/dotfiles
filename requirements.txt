@@ -5,14 +5,16 @@ rofi-lbonn-wayland-git
 grim
 slurp
 playerctl
+acpi
 
 #-*- Text editors -*-
 emacs-git
 
 #-*- Terminal -*-
-alacritty
-zsh
-oh-my-zsh
+kitty
+fish
+fisher
+starship
 
 #-*- Web -*-
 qutebrowser
@@ -55,6 +57,7 @@ docker
 doxygen
 yed
 ranger
+python-pillow
 autojump
 
 
@@ -100,3 +103,4 @@ greetd-tuigreet
 neofetch
 pdfsam
 
+nerd-fonts-fira-code

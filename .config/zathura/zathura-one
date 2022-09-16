@@ -1,0 +1,53 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+
+#
+# Zathura one
+#
+
+set notification-error-bg       "#ff6c6b" # Red
+set notification-error-fg       "#bbc2cf" # Foreground
+set notification-warning-bg     "#ECBE7B" # Yellow
+set notification-warning-fg     "#bbc2cf" # Foreground
+set notification-bg             "#21242b" # Background dark
+set notification-fg             "#bbc2cf" # Foreground
+
+set completion-bg               "#282c34" # Background light
+set completion-fg               "#bbc2cf" # Comment
+set completion-group-bg         "#21242b" # Background dark
+set completion-group-fg         "#bbc2cf" # Comment
+set completion-highlight-bg     "#44475a" # Selection
+set completion-highlight-fg     "#f8f8f2" # Foreground
+
+set index-bg                    "#282a34" # Background light
+set index-fg                    "#bbc2cf" # Foreground
+set index-active-bg             "#44475a" # Current Line
+set index-active-fg             "#bbc2cf" # Foreground
+
+set inputbar-bg                 "#21242b" # Background dark
+set inputbar-fg                 "#bbc2cf" # Foreground
+set statusbar-bg                "#21242b" # Background dark
+set statusbar-fg                "#bbc2cf" # Foreground
+
+set highlight-color             "#51afef" # Blue
+set highlight-active-color      "#bbc2cf" # Foregound
+
+set default-bg                  "#282c34" # Background light
+set default-fg                  "#bbc2cf" # Foreground
+
+set render-loading              true
+set render-loading-fg           "#282c34" # Background light
+set render-loading-bg           "#bbc2cf" # Foreground
+
+#
+# Recolor mode settings
+#
+
+set recolor-lightcolor          "#282c34" # Background light
+set recolor-darkcolor           "#bbc2cf" # Foreground
+
+#
+# Startup options
+#
+set adjust-open width
+set recolor true
